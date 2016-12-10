@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+		<link href="dist/rbt.min.css" rel="stylesheet"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="lib/bounce.min.js"></script>
+		<script src="lib/animate.js"></script>
+		<script src="dist/rbt.min.js"></script>
+		<style type="text/css">
+			.banner{
+				color: #6a9ca7;
+				font-size: 5vw;
+				text-transform: uppercase;
+				text-align: center; 
+				vertical-align: middle;
+			}
+			.large{
+				color: #6a9ca7;
+				font-size: 13vw;
+				text-transform: uppercase;
+				text-align: center; 
+				vertical-align: middle;
+			}
+			.round{
+				color: #FE4365
+			}
+			body{
+				background-color: #555;
+			}
+		</style>
+	</head>
+	<body>
+	<p>
+		<div class="large">
+			Fl<i class='fa fa-circle round'></i>ating <br/>R<i class='fa fa-circle round'></i>und <br/>Butt<i class='fa fa-circle round'></i>n
+		</div>
+	</p>
+	<p class="banner">
+		jQuery plugin
+	</p>
+<div class="rbt_wrapper" ></div>
+		<script type="text/javascript">
+			var config = {
+			    main: {
+			        "bgcolor":"#e74c3c",
+			        "icon":"<i class='fa fa-bars'></i>"
+			    },
+			    links:[
+			        {
+			            /*"url":"doceditor.html",*/
+			            "bgcolor":"#03A9F4",
+			            "color":"#fffff",
+			            "icon":"<i class='fa fa-file'></i>",
+			            /*"target":"_blank",*/
+			            "title" : "New Document",
+			            onClick: function(){
+			                alert("Why don't you try my another tool stubby-db to stub HTTP(s) calls...");
+			            }
+			        },{
+			            "url":"http://www.example.com",
+			            "bgcolor":"black",
+			            "color":"white",
+			            "icon":"<i class='fa fa-cog'></i>",
+			            "title" : "Settings"
+			        },{
+			            "url":"http://www.example.com",
+			            "bgcolor":"#3B5998",
+			            "color":"white",
+			            "icon":"<i class='fa fa-folder-open'></i>",
+			            "target":"_blank",
+			            "title" : "Open"
+			        }
+			    ]
+			}
+
+			$(document).ready(function(){
+			    rbt_display($(".rbt_wrapper"),config,(menu) => {
+			    	$(".rbt_main_btn").hover(function(){
+			    		mainAnimation($(this));
+			    	});
+			        menuAnimation(menu);
+			        //menu.slideDown( "slow" );
+			    });
+			});
+		</script>
+	</body>
+</html>
