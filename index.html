@@ -16,6 +16,14 @@
 				text-align: center; 
 				vertical-align: middle;
 			}
+			.small{
+				font-size: 2vw;
+				text-align: center; 
+				vertical-align: middle;
+			}
+			a{
+				color: yellow;
+			}
 			.large{
 				color: #6a9ca7;
 				font-size: 13vw;
@@ -26,21 +34,40 @@
 			.round{
 				color: #FE4365
 			}
+			.bulb{
+				color: #555;
+			}
 			body{
 				background-color: #555;
+			}
+			.nilogo{
+			  z-index: 9888;
+			  /*width:100%;*/
+			  /*height:240px;*/
+			  position:fixed;
+			  left:0px;
+			  bottom:0px;
+			  pointer-events:hand;
 			}
 		</style>
 	</head>
 	<body>
-	<p>
-		<div class="large">
-			Fl<i class='fa fa-circle round'></i>ating <br/>R<i class='fa fa-circle round'></i>und <br/>Butt<i class='fa fa-circle round'></i>n
-		</div>
-	</p>
+	<div class="large">
+		Fl<span class="fa-stack" style="width: 13vw; vertical-align: middle"><i class="fa fa-circle fa-stack-1x round"></i><i class='fa fa-lightbulb-o bulb fa-stack-1x'></i></span>ating
+		<br/>R<i class='fa fa-circle round'></i>und <br/>Butt<i class='fa fa-circle round'></i>n
+	</div>
+	<!-- <div class="large">
+	 <br/>R<i class='fa fa-circle round'></i>und <br/>Butt<i class='fa fa-circle round'></i>n
+	</div> -->
 	<p class="banner">
 		jQuery plugin
 	</p>
 <div class="rbt_wrapper" ></div>
+<div class="nilogo small" style="cursor: pointer;">
+	<a href="https://github.com/NaturalIntelligence/">
+		<span class="fa-stack" aria-hidden="true"><i class="fa fa-circle fa-stack-1x round" aria-hidden="true"></i><i class='fa fa-lightbulb-o bulb fa-stack-1x' aria-hidden="true"></i></span>Natural Intelligence
+	</a>
+</div>
 		<script type="text/javascript">
 			var config = {
 			    main: {
